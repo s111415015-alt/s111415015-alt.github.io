@@ -1,7 +1,76 @@
-<footer style="background:#f7f7f9;border-top:1px solid #e5e7eb;padding:32px 0 20px 0;margin-top:60px;">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>黃靖凱個人網站</title>
+  <style>
+    body { margin:0; font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background:#f7f7f9; color:#222; }
+    .banner { width:100%; padding:60px 0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#fff; border-bottom:1px solid #e5e7eb; }
+    .banner:nth-child(2) { background:#f7f7f9; }
+    .banner h1, .banner h2 { margin:0 0 18px 0; font-weight:700; }
+    .banner p { margin:0 0 10px 0; color:#555; }
+    .nav-bar { width:100%; max-width:900px; display:flex; justify-content:space-between; align-items:center; }
+    .nav-links a { color:#0b76ef; text-decoration:none; margin-left:24px; font-weight:500; }
+    .nav-links a:hover { text-decoration:underline; }
+    .intro { max-width:600px; text-align:center; }
+    .works { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; max-width:900px; width:100%; margin:0 auto; }
+    .work-card { background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.03); padding:24px; text-align:center; border:1px solid #e5e7eb; }
+    .work-card a { color:#0b76ef; text-decoration:none; font-weight:600; }
+    .work-card a:hover { text-decoration:underline; }
+    @media (max-width:600px) {
+      .banner { padding:36px 0; }
+      .nav-bar { flex-direction:column; gap:12px; }
+      .works { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner 1: 導覽 -->
+  <div class="banner" style="padding:28px 0 18px 0; background:#fff;">
+    <div class="nav-bar">
+      <div style="font-weight:700; font-size:20px;">黃靖凱個人網站</div>
+      <div class="nav-links">
+        <a href="#about">自我介紹</a>
+        <a href="#works">作品</a>
+        <a href="#contact">聯絡</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner 2: 自我介紹 -->
+  <div class="banner" id="about">
+    <div class="intro">
+      <h1>您好，我是黃靖凱</h1>
+      <p>國立台北教育大學 藝術與造型設計學系學生。</p>
+      <p>興趣：繪畫、打排球、追劇。</p>
+    </div>
+  </div>
+
+  <!-- Banner 3: 作品展示 -->
+  <div class="banner" id="works" style="background:#f7f7f9;">
+    <h2>作品展示</h2>
+    <div class="works">
+      <div class="work-card">
+        <div>1007 網頁作品</div>
+        <a href="../1007/index.html" target="_blank" rel="noopener">前往查看</a>
+      </div>
+      <div class="work-card">
+        <div>1014 網頁作品</div>
+        <a href="../1014/index.html" target="_blank" rel="noopener">前往查看</a>
+      </div>
+      <div class="work-card">
+        <div>1104 網頁作品</div>
+        <a href="../1104/index.html" target="_blank" rel="noopener">前往查看</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner 4: Footer -->
+<footer style="background:#f7f7f9;border-top:1px solid #e5e7eb;padding:32px 0 20px 0;margin-top:0;">
   <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:0 18px;gap:18px;">
     <div style="color:#222;font-size:16px;line-height:1.7;">
-      <div><strong>Email：</strong><a href="mailto:yourname@gmail.com" style="color:#0b76ef;text-decoration:none;">s111415015@stu.ntue.edu.tw</a></div>
+      <div><strong>Email：</strong><a href="mailto:s111415015@stu.ntue.edu.tw" style="color:#0b76ef;text-decoration:none;">s111415015@stu.ntue.edu.tw</a></div>
       <div style="margin-top:6px"><strong>學校：</strong>國立台北教育大學 藝術與造型設計學系</div>
     </div>
     <div style="display:flex;align-items:center;gap:16px;">
@@ -11,3 +80,5 @@
   </div>
   <div style="text-align:center;color:#b0b3b8;font-size:13px;margin-top:18px;">© 2025 黃靖凱個人網站</div>
 </footer>
+</body>
+</html>
