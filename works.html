@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>作品展示 - 黃靖凱個人網站</title>
+  <style>
+    body { margin:0; font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background:#f7f7f9; color:#222; }
+    .container { max-width:900px; margin:40px auto; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.03); padding:40px 28px; }
+    h1 { font-size:2em; font-weight:700; margin-bottom:24px; }
+    .works { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; width:100%; margin:0 auto; }
+    .work-card { background:#f7f7f9; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.03); padding:24px; text-align:center; border:1px solid #e5e7eb; }
+    .work-card a { color:#0b76ef; text-decoration:none; font-weight:600; }
+    .work-card a:hover { text-decoration:underline; }
+    .back-link { margin-top:36px; display:block; text-align:right; }
+    @media (max-width:800px) {
+      .works { grid-template-columns:1fr 1fr!important; }
+    }
+    @media (max-width:600px) {
+      .container { padding:18px 4px; }
+      .works { grid-template-columns:1fr!important; }
+    }
+  </style>
+</head>
+<body>
+      <!-- Banner 1: 導覽 -->
+  <div class="banner" style="padding:28px 0 18px 0; background:#fff;">
+    <div class="nav-bar">
+      <div style="font-weight:700; font-size:20px;">黃靖凱個人網站</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="about.html">自我介紹</a>
+        <a href="works.html">作品</a>
+        <a href="contact.html">聯絡</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>作品展示</h1>
+    <div class="works">
+      <div class="work-card">
+        <div>1007 網頁作品</div>
+        <a href="1007/index.html" target="_blank" rel="noopener">
+          <img src="1007/pic2.jpg" alt="1007縮圖" style="width:60px;height:40px;object-fit:cover;border-radius:6px;margin-bottom:6px;display:block;margin-left:auto;margin-right:auto;">
+          前往查看
+        </a>
+      </div>
+      <div class="work-card">
+        <div>1014 網頁作品</div>
+        <a href="1014/index.html" target="_blank" rel="noopener">
+          <img src="1014/pic1014.JPG" alt="1014縮圖" style="width:60px;height:40px;object-fit:cover;border-radius:6px;margin-bottom:6px;display:block;margin-left:auto;margin-right:auto;">
+          前往查看
+        </a>
+      </div>
+      <div class="work-card">
+        <div>1104 網頁作品</div>
+        <a href="1104/index.html" target="_blank" rel="noopener">
+          <img src="1104/1.jpg" alt="1104縮圖" style="width:60px;height:40px;object-fit:cover;border-radius:6px;margin-bottom:6px;display:block;margin-left:auto;margin-right:auto;">
+          前往查看
+        </a>
+      </div>
+      <div class="work-card">
+        <div>1118 網頁作品</div>
+        <a href="1118/index.html" target="_blank" rel="noopener">前往查看</a>
+      </div>
+      <div class="work-card">
+        <div>1021 網頁作品</div>
+        <a href="1021/index.html" target="_blank" rel="noopener">
+          <img src="1021/map.jpg" alt="1021縮圖" style="width:60px;height:40px;object-fit:cover;border-radius:6px;margin-bottom:6px;display:block;margin-left:auto;margin-right:auto;">
+          前往查看
+        </a>
+      </div>
+    </div>
+    <a class="back-link" href="index.html">← 回首頁</a>
+  </div>
+</body>
+</html>
