@@ -4,30 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>自我介紹 - 黃靖凱個人網站</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background:#f7f7f9; color:#222; }
-    .container { max-width:700px; margin:40px auto; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.03); padding:40px 28px; }
-    h1 { font-size:2.2em; font-weight:700; margin-bottom:18px; }
-    h2 { font-size:1.3em; margin-top:32px; margin-bottom:12px; color:#0b76ef; }
-    p { font-size:1.1em; color:#555; line-height:1.8; }
-    .photo-block { display:flex; align-items:flex-start; margin-bottom:28px; }
-    .photo-block img { width:150px; height:220px; object-fit:cover; border-radius:18px; border:3px solid #e5e7eb; box-shadow:0 2px 8px rgba(0,0,0,0.06); margin-right:32px; }
-    .about-content { flex:1; }
-    .back-link { margin-top:36px; display:block; text-align:right; }
-    a { color:#0b76ef; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    @media (max-width:600px) {
-      .photo-block { flex-direction:column; align-items:center; }
-      .photo-block img { margin-right:0; margin-bottom:18px; width:100px; height:146px; }
-      .about-content { width:100%; }
+    :root{ --bg-1:#020617; --bg-2:#071028; --accent:#00e5ff; --accent-2:#6af2ff; --muted:#9aa6b2; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Inter, system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background: radial-gradient(600px 300px at 10% 10%, rgba(0,229,255,0.04), transparent 8%), linear-gradient(135deg,var(--bg-1) 0%, #041022 50%, var(--bg-2) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; min-height:100vh; }
+    .banner{ width:100%; padding:20px 0; background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-bottom:1px solid rgba(255,255,255,0.03); backdrop-filter: blur(6px); }
+    .nav-bar{ width:100%; max-width:900px; display:flex; justify-content:space-between; align-items:center; margin:0 auto; padding:0 16px; }
+    .nav-bar > div:first-child{ font-weight:700; font-size:20px; font-family:'Orbitron',sans-serif; color:var(--accent-2); letter-spacing:0.6px; }
+    .nav-links a{ color:var(--accent); text-decoration:none; margin-left:18px; font-weight:600; padding:8px 12px; border-radius:8px; transition: all .16s ease; border:1px solid transparent; }
+    .nav-links a:hover{ background: linear-gradient(90deg, rgba(0,229,255,0.06), rgba(106,242,255,0.03)); box-shadow: 0 8px 22px rgba(0,229,255,0.06); transform: translateY(-3px); border-color: rgba(0,229,255,0.12); }
+    .container{ max-width:700px; margin:40px auto; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; box-shadow: 0 12px 40px rgba(2,6,23,0.6); padding:40px 28px; border:1px solid rgba(0,229,255,0.05); backdrop-filter: blur(8px); }
+    h1{ font-family:'Orbitron',sans-serif; font-size:2.2em; font-weight:700; margin-bottom:18px; color:#dffaff; letter-spacing:0.8px; }
+    h2{ font-family:'Orbitron',sans-serif; font-size:1.3em; margin-top:32px; margin-bottom:12px; color:var(--accent); letter-spacing:0.4px; }
+    p{ font-size:1.1em; color:var(--muted); line-height:1.8; }
+    .photo-block{ display:flex; align-items:flex-start; margin-bottom:28px; }
+    .photo-block img{ width:150px; height:220px; object-fit:cover; border-radius:12px; border:2px solid rgba(0,229,255,0.15); box-shadow: 0 8px 24px rgba(0,229,255,0.08); margin-right:32px; }
+    .about-content{ flex:1; }
+    .back-link{ margin-top:36px; display:block; text-align:right; color:var(--accent); text-decoration:none; font-weight:600; transition: color .14s ease; }
+    .back-link:hover{ color:var(--accent-2); text-decoration:underline; }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    @media (max-width:600px){
+      .photo-block{ flex-direction:column; align-items:center; }
+      .photo-block img{ margin-right:0; margin-bottom:18px; width:100px; height:146px; }
+      .about-content{ width:100%; }
+      .container{ margin:24px 16px; padding:20px; }
+      h1{ font-size:1.6em; }
     }
   </style>
 </head>
 <body>
   <!-- Banner 1: 導覽 -->
-  <div class="banner" style="padding:28px 0 18px 0; background:#fff;">
+  <div class="banner">
     <div class="nav-bar">
-      <div style="font-weight:700; font-size:20px;">黃靖凱個人網站</div>
+      <div>黃靖凱個人網站</div>
       <div class="nav-links">
         <a href="index.html">首頁</a>
         <a href="about.html">自我介紹</a>

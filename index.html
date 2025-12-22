@@ -4,35 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>黃靖凱個人網站</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background:#f7f7f9; color:#222; }
-    .banner { width:100%; padding:60px 0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#fff; border-bottom:1px solid #e5e7eb; }
-    .banner:nth-child(2) { background:#f7f7f9; }
-    .banner h1, .banner h2 { margin:0 0 18px 0; font-weight:700; }
-    .banner p { margin:0 0 10px 0; color:#555; }
-    .nav-bar { width:100%; max-width:900px; display:flex; justify-content:space-between; align-items:center; }
-    .nav-links a { color:#0b76ef; text-decoration:none; margin-left:24px; font-weight:500; }
-    .nav-links a:hover { text-decoration:underline; }
-    .intro { max-width:600px; text-align:center; }
-    .works { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; max-width:900px; width:100%; margin:0 auto; }
-    .work-card { background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.03); padding:24px; text-align:center; border:1px solid #e5e7eb; }
-    .work-card a { color:#0b76ef; text-decoration:none; font-weight:600; }
-    .work-card a:hover { text-decoration:underline; }
-    @media (max-width:800px) {
-      .works { grid-template-columns:1fr 1fr!important; }
-    }
-    @media (max-width:600px) {
-      .banner { padding:36px 0; }
-      .nav-bar { flex-direction:column; gap:12px; }
-      .works { grid-template-columns:1fr!important; }
+    :root{ --bg-1:#020617; --bg-2:#071028; --accent:#00e5ff; --accent-2:#6af2ff; --muted:#9aa6b2; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Inter, system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',Arial; background: radial-gradient(600px 300px at 10% 10%, rgba(0,229,255,0.04), transparent 8%), linear-gradient(135deg,var(--bg-1) 0%, #041022 50%, var(--bg-2) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; }
+    .banner{ width:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; border-bottom:1px solid rgba(255,255,255,0.03); }
+    .banner:first-child{ padding:20px 0; background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter: blur(6px); }
+    .banner:nth-child(2){ padding:60px 18px; background:transparent; }
+    .banner:nth-child(3){ padding:60px 18px; background:transparent; }
+    .banner h1, .banner h2{ margin:0 0 18px 0; font-weight:700; font-family:'Orbitron',sans-serif; color:#dffaff; letter-spacing:0.8px; }
+    .banner h1{ font-size:2.2rem; }
+    .banner h2{ font-size:1.8rem; }
+    .banner p{ margin:0 0 10px 0; color:var(--muted); }
+    .nav-bar{ width:100%; max-width:900px; display:flex; justify-content:space-between; align-items:center; padding:0 16px; }
+    .nav-bar > div:first-child{ font-weight:700; font-size:20px; font-family:'Orbitron',sans-serif; color:var(--accent-2); letter-spacing:0.6px; }
+    .nav-links a{ color:var(--accent); text-decoration:none; margin-left:18px; font-weight:600; padding:8px 12px; border-radius:8px; transition: all .16s ease; border:1px solid transparent; }
+    .nav-links a:hover{ background: linear-gradient(90deg, rgba(0,229,255,0.06), rgba(106,242,255,0.03)); box-shadow: 0 8px 22px rgba(0,229,255,0.06); transform: translateY(-3px); border-color: rgba(0,229,255,0.12); }
+    .intro{ max-width:600px; text-align:center; }
+    .works{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; width:100%; margin:0 auto; }
+    .work-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; box-shadow: 0 12px 40px rgba(2,6,23,0.6); padding:24px; text-align:center; border:1px solid rgba(0,229,255,0.05); backdrop-filter: blur(8px); transition: transform .14s ease, box-shadow .14s ease; }
+    .work-card:hover{ transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,229,255,0.04); }
+    .work-card a{ color:var(--accent); text-decoration:none; font-weight:600; transition: color .14s ease; }
+    .work-card a:hover{ color:var(--accent-2); text-decoration:underline; }
+    footer{ background:transparent; border-top:1px solid rgba(255,255,255,0.03); padding:32px 18px 20px 18px; margin-top:0; }
+    footer a{ color:var(--accent); text-decoration:none; transition: color .14s ease; }
+    footer a:hover{ color:var(--accent-2); }
+    footer div:last-child{ color:var(--muted); }
+    @media (max-width:800px){ .works{ grid-template-columns:1fr 1fr!important; } }
+    @media (max-width:600px){
+      .banner:nth-child(2), .banner:nth-child(3){ padding:36px 16px; }
+      .nav-bar{ flex-direction:column; gap:12px; }
+      .works{ grid-template-columns:1fr!important; }
+      .banner h1{ font-size:1.6rem; }
+      .banner h2{ font-size:1.4rem; }
     }
   </style>
 </head>
 <body>
   <!-- Banner 1: 導覽 -->
-  <div class="banner" style="padding:28px 0 18px 0; background:#fff;">
+  <div class="banner">
     <div class="nav-bar">
-      <div style="font-weight:700; font-size:20px;">黃靖凱個人網站</div>
+      <div>黃靖凱個人網站</div>
       <div class="nav-links">
         <a href="index.html">首頁</a>
         <a href="about.html">自我介紹</a>
@@ -52,9 +65,9 @@
   </div>
 
   <!-- Banner 3: 作品展示 -->
-  <div class="banner" id="works" style="background:#f7f7f9;">
+  <div class="banner" id="works">
     <h2>作品展示</h2>
-    <div class="works" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;width:100%;margin:0 auto;">
+    <div class="works">
       <div class="work-card">
         <div>1007 網頁作品</div>
         <a href="1007/index.html" target="_blank" rel="noopener">前往查看</a>
@@ -76,29 +89,21 @@
         <a href="1021/index.html" target="_blank" rel="noopener">前往查看</a>
       </div>
     </div>
-    <style>
-      @media (max-width:800px) {
-        .works { grid-template-columns:1fr 1fr!important; }
-      }
-      @media (max-width:600px) {
-        .works { grid-template-columns:1fr!important; }
-      }
-    </style>
   </div>
 
   <!-- Banner 4: Footer -->
-<footer style="background:#f7f7f9;border-top:1px solid #e5e7eb;padding:32px 0 20px 0;margin-top:0;">
-  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:0 18px;gap:18px;">
-    <div style="color:#222;font-size:16px;line-height:1.7;">
-      <div><strong>Email：</strong><a href="mailto:s111415015@stu.ntue.edu.tw" style="color:#0b76ef;text-decoration:none;">s111415015@stu.ntue.edu.tw</a></div>
-      <div style="margin-top:6px"><strong>學校：</strong>國立台北教育大學 藝術與造型設計學系</div>
+  <footer>
+    <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;">
+      <div style="color:#e6eef8;font-size:16px;line-height:1.7;">
+        <div><strong>Email：</strong><a href="mailto:s111415015@stu.ntue.edu.tw">s111415015@stu.ntue.edu.tw</a></div>
+        <div style="margin-top:6px"><strong>學校：</strong>國立台北教育大學 藝術與造型設計學系</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="https://www.facebook.com/huang.jing.kai.852931" target="_blank" rel="noopener" style="font-size:18px;">Facebook</a>
+        <a href="https://www.instagram.com/cdhxjing" target="_blank" rel="noopener" style="font-size:18px;">Instagram</a>
+      </div>
     </div>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <a href="https://www.facebook.com/你的帳號" target="_blank" rel="noopener" style="color:#6b7280;text-decoration:none;font-size:18px;">Facebook</a>
-      <a href="https://www.instagram.com/你的帳號" target="_blank" rel="noopener" style="color:#6b7280;text-decoration:none;font-size:18px;">Instagram</a>
-    </div>
-  </div>
-  <div style="text-align:center;color:#b0b3b8;font-size:13px;margin-top:18px;">© 2025 黃靖凱個人網站</div>
-</footer>
+    <div style="text-align:center;font-size:13px;margin-top:18px;">© 2025 黃靖凱個人網站</div>
+  </footer>
 </body>
 </html>
